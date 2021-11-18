@@ -3,7 +3,14 @@ from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
 
 
-class Questions(models.Model):
+class Form(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.CharField(max_length=10000, blank=True)
+    createdAt = models.DateTimeField(auto_now_add=True)
+    updatedAt = models.DateTimeField(auto_now=True)
+
+
+class Question(models.Model):
     class QuestionTypes(models.TextChoices):
         TEXT = 'TEXT', _('Text Field')
         EMAIL = 'EMAIL', _('Email Field')
@@ -17,19 +24,12 @@ class Questions(models.Model):
     )
     question = models.CharField(max_length=10000)
     choices = models.JSONField()
+    form = models.ForeignKey(Form, related_name="questions", on_delete=models.CASCADE)
 
 
 class Answer(models.Model):
     answer = models.CharField(max_length=5000)
-    answer_to = models.ForeignKey(Questions, on_delete=models.CASCADE, related_name="answer_to")
-
-
-class Form(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.CharField(max_length=10000, blank=True)
-    createdAt = models.DateTimeField(auto_now_add=True)
-    updatedAt = models.DateTimeField(auto_now=True)
-    questions = models.ManyToManyField(Questions, related_name="questions")
+    answer_to = models.ForeignKey(Question, on_delete=models.CASCADE, related_name="answer_to")
 
 
 class Responses(models.Model):
