@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../tobias_hochguertel_work/crm-backend-master/.idea/crm-backend-master.iml" filepath="$PROJECT_DIR$/../../tobias_hochguertel_work/crm-backend-master/.idea/crm-backend-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/django_form_builder.iml" filepath="$PROJECT_DIR$/.idea/django_form_builder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../tobias_hochguertel_work/reversano-crm-frontend-master/reversano-crm-frontend/.idea/reversano-crm-frontend.iml" filepath="$PROJECT_DIR$/../../tobias_hochguertel_work/reversano-crm-frontend-master/reversano-crm-frontend/.idea/reversano-crm-frontend.iml" />
     </modules>
   </component>
 </project>
