@@ -16,8 +16,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="Poetry (django_form_builder)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="crm-backend-master" />
-    <orderEntry type="module" module-name="reversano-crm-frontend" />
   </component>
   <component name="PyDocumentationSettings">
     <option name="format" value="PLAIN" />
